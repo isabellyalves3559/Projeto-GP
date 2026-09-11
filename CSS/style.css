@@ -1,0 +1,258 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+:root {
+    --cor-primaria: #0056b3;
+    --cor-destaque: #ff6600;
+    --cor-escura: #1a1a1a;
+    --cor-clara: #f4f7f6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-escura);
+    color: #fff;
+    padding: 1.2rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.equipe-rocket {
+    color: var(--cor-destaque);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Hero Section (Apenas o Card com Fundo Escuro) */
+.hero {
+    background: transparent;
+    padding: 3rem 0;
+}
+
+.hero-content {
+    background: linear-gradient(135deg, #0056b3, #002d5e);
+    padding: 3.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Marca JTEKT no topo do Card */
+.marca-desafio {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.jtekt-logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.jtekt-logo .letra-branca {
+    color: #ffffff;
+}
+
+.jtekt-logo .letra-vermelha {
+    color: #ff3b30;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Slogan da Equipe Rocket */
+.slogan-rocket {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffd166;
+    margin-bottom: 1.2rem;
+}
+
+.descricao-projeto {
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    padding: 0.8rem 2.2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #e05500;
+    transform: translateY(-2px);
+}
+
+/* Seções Gerais */
+.section {
+    padding: 4rem 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--cor-primaria);
+}
+
+.bg-light {
+    background-color: var(--cor-clara);
+}
+
+/* Grids */
+.prototipo-grid {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.prototipo-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+.prototipo-img img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.prototipo-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.prototipo-texto ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--cor-destaque);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--cor-primaria);
+}
+
+/* Equipe */
+.equipe-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.membro {
+    text-align: center;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-escura);
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer strong {
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -5,6 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protótipo - Grand Prix SENAI</title>
     <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo - Grand Prix SENAI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho / Menu Superior -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="equipe-rocket">🚀 Equipe Rocket</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#problema">O Problema</a></li>
+                    <li><a href="#solucao">Totem Digital</a></li>
+                    <li><a href="#maquete">Maquete & Pitch</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="marca-desafio">
+                Desafio 
+                <span class="jtekt-logo">
+                    <span class="letra-preta">JT</span><span class="letra-vermelha">E</span><span class="letra-preta">KT</span>
+                </span>
+            </div>
+            <h1>Nome da Solução</h1>
+            <p class="slogan-rocket">🚀 <em>"Decolando ideias, transformando a indústria."</em> — Equipe Rocket</p>
+            <p class="descricao-projeto">A proposta busca otimizar o espaço e modernizar a gestão do armazém, ampliando sua capacidade e eficiência operacional.</p>
+            <a href="#solucao" class="btn">Ver Protótipo</a>
+        </div>
+    </section>
+
+    <!-- O Problema -->
+    <section id="problema" class="section">
+        <div class="container">
+            <h2>O Desafio</h2>
+            <p>A JTEKT enfrenta atualmente um desafio relacionado à capacidade de armazenagem de sua fábrica. O armazém possui capacidade de 2.440 posições, porém 580 delas são ocupadas por uma área produtiva localizada dentro do próprio armazém, reduzindo a capacidade efetivamente disponível para armazenagem para aproximadamente 1.860 posições. Ao mesmo tempo, a empresa possui uma perspectiva de crescimento da demanda até 2030, o que exigirá aproximadamente 1.579 novas posições de armazenagem. Diante desse cenário, o desafio proposto consiste em preparar a operação para esse crescimento sem realizar modificações físicas na planta e sem comprometer o processo produtivo.</p>
+        </div>
+    </section>
+
+    <!-- A Solução / Protótipo Interativo (Totem Digital) -->
+    <section id="solucao" class="section bg-light">
+        <div class="container">
+            <h2>Demonstração do Totem Interativo</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Clique nos botões do totem abaixo para navegar pelas telas do sistema!</p>
+
+            <!-- Moldura do Totem -->
+            <div class="totem-frame">
+                <div class="totem-screen">
+                    
+                    <!-- TELA 1: Menu Principal -->
+                    <div id="tela-home" class="totem-page active">
+                        <div class="totem-header">
+                            <span class="icon-gear">⚙️</span>
+                            <div class="jtekt-logo">
+                                <span class="letra-preta">JT</span><span class="letra-vermelha">E</span><span class="letra-preta">KT</span>
+                            </div>
+                        </div>
+                        <div class="totem-menu">
+                            <button class="btn-totem" onclick="mudarTela('tela-mapeamento')">MAPEAMENTO</button>
+                            <button class="btn-totem" onclick="mudarTela('tela-estoque')">CONTROLE DE ESTOQUE</button>
+                            <button class="btn-totem" onclick="mudarTela('tela-funcionarios')">CONTROLE DE FUNCIONÁRIOS</button>
+                        </div>
+                        <div class="totem-footer">
+                            <a href="#" class="pedir-ajuda">PEDIR AJUDA</a>
+                        </div>
+                    </div>
+
+                    <!-- TELA 2: Mapeamento -->
+                    <div id="tela-mapeamento" class="totem-page">
+                        <div class="totem-nav-top">
+                            <button onclick="mudarTela('tela-home')">← Voltar</button>
+                            <h3>Mapeamento</h3>
+                        </div>
+                        <div class="mapa-grid">
+                            <div class="corredor">Prateleira A1</div>
+                            <div class="corredor">Prateleira A2</div>
+                            <div class="corredor destaque-red">Prateleira B1 (Alerta)</div>
+                            <div class="corredor">Prateleira B2</div>
+                        </div>
+                    </div>
+
+                    <!-- TELA 3: Controle de Estoque -->
+                    <div id="tela-estoque" class="totem-page">
+                        <div class="totem-nav-top">
+                            <button onclick="mudarTela('tela-home')">← Voltar</button>
+                            <h3>Controle de Estoque</h3>
+                        </div>
+                        <div class="abas-estoque">
+                            <span class="aba active">B1</span>
+                            <span class="aba">B2</span>
+                            <span class="aba">B3</span>
+                            <span class="aba">B4</span>
+                        </div>
+                        <div class="dados-estoque">
+                            <p><strong>Setor B1</strong></p>
+                            <p>Paletes Utilizados: 14</p>
+                            <p>Paletes Disponíveis: 8</p>
+                        </div>
+                    </div>
+
+                    <!-- TELA 4: Controle de Funcionários -->
+                    <div id="tela-funcionarios" class="totem-page">
+                        <div class="totem-nav-top">
+                            <button onclick="mudarTela('tela-home')">← Voltar</button>
+                            <h3>Acesso Restrito</h3>
+                        </div>
+                        <div class="alerta-box">
+                            <p class="titulo-alerta">⚠️ ATENÇÃO!</p>
+                            <p>Esta tela só pode ser acessada por funcionários autorizados.</p>
+                            <p class="instrucao">Aproxime o cartão de verificação para desbloquear.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Representação Física, Maquete e Pitch -->
+    <section id="maquete" class="section">
+        <div class="container">
+            <h2>Protótipo Físico & Apresentação</h2>
+            <p style="margin-bottom: 2rem;">Confira a maquete física desenvolvida para a demonstração prática e assista ao nosso pitch do projeto.</p>
+
+            <!-- Cards com Imagens da Maquete e Representação -->
+            <div class="cards-grid">
+                
+                <div class="card">
+                    <h3>Maquete do Armazém</h3>
+                    <!-- Substitua o caminho dentro de src="" pelo nome da imagem da sua maquete -->
+                    <img src="https://via.placeholder.com/400x250?text=Foto+da+Maquete" alt="Foto da Maquete do Armazém" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
+                    <p>Visão geral da maquete física construída para exemplificar a reorganização das posições do armazém.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Totem Físico (Pitch)</h3>
+                    <!-- Substitua o caminho dentro de src="" pela foto do totem físico que fizeram para o pitch -->
+                    <img src="https://via.placeholder.com/400x250?text=Totem+Fisico" alt="Representação Física do Totem" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
+                    <p>Estrutura física do totem desenvolvida para a apresentação presencial da solução.</p>
+                </div>
+
+            </div>
+
+            <!-- Caixa de Destaque para o Link do Pitch -->
+            <div style="background: #eef2f5; padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 5px solid #e60012;">
+                <h3>🎬 Vídeo do Pitch</h3>
+                <p style="margin: 0.5rem 0 1rem 0;">Assista à nossa apresentação completa do projeto para o Grand Prix SENAI:</p>
+                <!-- Substitua o link 'https://youtube.com' pelo link real do vídeo de vocês -->
+                <a href="https://youtube.com" target="_blank" class="btn" style="display: inline-block; width: auto;">Assistir Vídeo do Pitch 🚀</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="section bg-light">
+        <div class="container">
+            <h2>Por que nossa ideia é inovadora?</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Viabilidade Econômica</h3>
+                    <p>Estima-se um investimento inicial de R$ 70 mil a R$ 140 mil, incluindo software, sensores, leitores, infraestrutura e treinamento. A solução é viável por aproveitar estruturas existentes, reduzir erros e movimentações e evitar expansão física imediata.</p>
+                </div>
+                <div class="card">
+                    <h3>Impacto Social</h3>
+                    <p>Seu impacto esperado é aumentar a capacidade, a rastreabilidade e a eficiência operacional, preparando a JTEKT para o crescimento até 2030.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section id="equipe" class="section">
+        <div class="container">
+            <h2>Equipe Rocket</h2>
+            <div class="equipe-grid">
+                <div class="membro">
+                    <div class="avatar">M1</div>
+                    <h4>Isabelly</h4>
+                    <p>Líder</p>
+                </div>
+                <div class="membro">
+                    <div class="avatar">M2</div>
+                    <h4>João</h4>
+                    <p>Desenvolvedor</p>
+                </div>
+                <div class="membro">
+                    <div class="avatar">M3</div>
+                    <h4>Arthur</h4>
+                    <p>Desenvolvedor</p>
+                </div>
+                <div class="membro">
+                    <div class="avatar">M4</div>
+                    <h4>Ket</h4>
+                    <p>Designer</p>
+                </div>
+                <div class="membro">
+                    <div class="avatar">M5</div>
+                    <h4>Matheus</h4>
+                    <p>Designer Assistente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>Projeto desenvolvido pela <strong>Equipe Rocket</strong> para o <strong>Grand Prix SENAI de Inovação</strong></p>
+        </div>
+    </footer>
+
+    <!-- Arquivo de scripts externos -->
+    <script src="script.js"></script>
+
+</body>
+</html>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>

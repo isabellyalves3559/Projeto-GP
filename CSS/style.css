@@ -104,6 +104,10 @@ nav ul li a:hover {
 .jtekt-logo .letra-vermelha {
     color: #ff3b30;
 }
+.jtekt-logo .letra-branca {
+    color: #ffffff;
+}
+
 
 .hero-content h1 {
     font-size: 2.5rem;
@@ -422,4 +426,314 @@ footer strong {
     font-size: 0.8rem;
     margin-top: 1rem;
     color: #666;
+}
+/* Layout Lado a Lado */
+.totem-layout-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap; /* Ajusta em telas menores */
+}
+
+/* Painel Lateral que Funciona como Aba */
+.painel-detalhes-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    min-height: 400px;
+}
+
+/* Esconde todas as abas por padrão */
+.painel-aba {
+    display: none;
+}
+
+/* Exibe apenas a aba ativa */
+.painel-aba.active {
+    display: block;
+}
+
+.aba-header {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+}
+/* --- CENTRAL DO PROTÓTIPO DIGITAL --- */
+
+/* Barra de Botões do Sistema */
+.totem-nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    background: #ffffff;
+    border: 2px solid #0056b3;
+    color: #0056b3;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.btn-nav:hover, .btn-nav.active {
+    background: #0056b3;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.25);
+}
+
+/* Moldura Industrial do Sistema */
+.system-monitor-frame {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #111111;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+}
+
+.screen-viewport {
+    width: 100%;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Transição das Telas */
+.system-screen {
+    display: none;
+}
+
+.system-screen.active {
+    display: block;
+}
+
+.system-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botão Figma */
+.btn-figma {
+    display: inline-block;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-figma:hover {
+    background-color: #e60012;
+}
+/* --- MONITOR INDUSTRIAL INTERATIVO --- */
+.system-monitor-frame {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border: 2px solid #333;
+    overflow: hidden;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.system-top-bar {
+    background: #11111100;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e60012;
+}
+
+.system-status span {
+    margin-left: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-online { color: #28a745; }
+.status-alerta { color: #dc3545; }
+
+.screen-viewport {
+    background: #f4f6f9;
+    min-height: 420px;
+    padding: 1.5rem;
+}
+
+/* Lógica de Exibição das Telas */
+.system-screen {
+    display: none;
+}
+
+.system-screen.active {
+    display: block;
+}
+
+/* Componentes Tela Menu Principal */
+.screen-header-blue {
+    background: #002b49;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.cards-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.card-menu-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Componentes de Tabelas e Grid */
+.mapa-layout-flex, .estoque-flex-content, .funcionarios-flex-layout {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.grid-galpao-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.box-galpao {
+    background: #fff;
+    border: 2px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.alerta-box-red {
+    border-color: #dc3545;
+    background: #ffe6e6;
+    color: #dc3545;
+}
+
+.mapa-painel-lateral {
+    background: #222;
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 220px;
+}
+
+.alerta-box-detalhe {
+    background: #dc3545;
+    color: #fff;
+    padding: 0.4rem;
+    border-radius: 4px;
+    margin: 0.8rem 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabela-sistema {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.tabela-sistema th, .tabela-sistema td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.tabela-sistema th {
+    background: #f0f0f0;
+}
+
+.tag-red { color: #dc3545; font-weight: bold; }
+.tag-green { color: #28a745; font-weight: bold; }
+.tag-alerta-red { color: #dc3545; font-size: 0.8rem; font-weight: bold; display: block; margin-top: 0.5rem; }
+.tag-alerta-green { color: #28a745; font-size: 0.8rem; font-weight: bold; display: block; margin-top: 0.5rem; }
+
+.cards-estatisticas, .painel-resumo-func {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 200px;
+}
+
+.card-metric, .box-stat-dark {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.box-stat-dark {
+    background: #222;
+    color: #fff;
+}
+
+.tabs-estoque-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tab-item {
+    background: #002b49;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Estilização para as fotos/logos dos membros da equipe */
+.avatar-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; /* Deixa a imagem perfeitamente redonda */
+    object-fit: cover; /* Garante que a foto não fique distorcida */
+    border: 3px solid #e60012; /* Borda vermelha no padrão JTEKT/Rocket */
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }

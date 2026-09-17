@@ -13,8 +13,8 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <span class="equipe-rocket">🚀 Equipe Rocket</span>
-            </div>
+    <img src="/images/logo-rocket-minimalista.png.jpeg" alt="Logo Equipe Rocket" style="height: 40px; vertical-align: middle;">
+        </div>
             <nav>
                 <ul>
                     <li><a href="#problema">O Problema</a></li>
@@ -36,7 +36,7 @@
                     <span class="letra-preta">JT</span><span class="letra-vermelha">E</span><span class="letra-preta">KT</span>
                 </span>
             </div>
-            <h1>Nome da Solução</h1>
+        
             <p class="slogan-rocket">🚀 <em>"Decolando ideias, transformando a indústria."</em> — Equipe Rocket</p>
             <p class="descricao-projeto">A proposta busca otimizar o espaço e modernizar a gestão do armazém, ampliando sua capacidade e eficiência operacional.</p>
             <a href="#solucao" class="btn">Ver Protótipo</a>
@@ -57,77 +57,212 @@
             <h2>Demonstração do Totem Interativo</h2>
             <p style="text-align: center; margin-bottom: 2rem;">Clique nos botões do totem abaixo para navegar pelas telas do sistema!</p>
 
-            <!-- Moldura do Totem -->
-            <div class="totem-frame">
-                <div class="totem-screen">
-                    
-                    <!-- TELA 1: Menu Principal -->
-                    <div id="tela-home" class="totem-page active">
-                        <div class="totem-header">
-                            <span class="icon-gear">⚙️</span>
-                            <div class="jtekt-logo">
-                                <span class="letra-preta">JT</span><span class="letra-vermelha">E</span><span class="letra-preta">KT</span>
-                            </div>
-                        </div>
-                        <div class="totem-menu">
-                            <button class="btn-totem" onclick="mudarTela('tela-mapeamento')">MAPEAMENTO</button>
-                            <button class="btn-totem" onclick="mudarTela('tela-estoque')">CONTROLE DE ESTOQUE</button>
-                            <button class="btn-totem" onclick="mudarTela('tela-funcionarios')">CONTROLE DE FUNCIONÁRIOS</button>
-                        </div>
-                        <div class="totem-footer">
-                            <a href="#" class="pedir-ajuda">PEDIR AJUDA</a>
-                        </div>
-                    </div>
+           <!-- A Solução / Protótipo Interativo -->
+<section id="solucao" class="section bg-light">
+    <div class="container">
+        <h2>Sistema de Gestão Industrial - JTEKT</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Clique nos botões abaixo para navegar pelas telas do sistema em tempo real:</p>
 
-                    <!-- TELA 2: Mapeamento -->
-                    <div id="tela-mapeamento" class="totem-page">
-                        <div class="totem-nav-top">
-                            <button onclick="mudarTela('tela-home')">← Voltar</button>
-                            <h3>Mapeamento</h3>
-                        </div>
-                        <div class="mapa-grid">
-                            <div class="corredor">Prateleira A1</div>
-                            <div class="corredor">Prateleira A2</div>
-                            <div class="corredor destaque-red">Prateleira B1 (Alerta)</div>
-                            <div class="corredor">Prateleira B2</div>
-                        </div>
-                    </div>
+        <!-- Menu de Navegação Superior -->
+        <div class="totem-nav-bar">
+            <button class="btn-nav active" onclick="abrirTelaSystem('sys-home', this)">🏠 Menu Principal</button>
+            <button class="btn-nav" onclick="abrirTelaSystem('sys-mapeamento', this)">🗺️ Mapeamento</button>
+            <button class="btn-nav" onclick="abrirTelaSystem('sys-estoque', this)">📊 Controle de Estoque</button>
+            <button class="btn-nav" onclick="abrirTelaSystem('sys-funcionarios', this)">👥 Funcionários</button>
+        </div>
 
-                    <!-- TELA 3: Controle de Estoque -->
-                    <div id="tela-estoque" class="totem-page">
-                        <div class="totem-nav-top">
-                            <button onclick="mudarTela('tela-home')">← Voltar</button>
-                            <h3>Controle de Estoque</h3>
-                        </div>
-                        <div class="abas-estoque">
-                            <span class="aba active">B1</span>
-                            <span class="aba">B2</span>
-                            <span class="aba">B3</span>
-                            <span class="aba">B4</span>
-                        </div>
-                        <div class="dados-estoque">
-                            <p><strong>Setor B1</strong></p>
-                            <p>Paletes Utilizados: 14</p>
-                            <p>Paletes Disponíveis: 8</p>
-                        </div>
-                    </div>
-
-                    <!-- TELA 4: Controle de Funcionários -->
-                    <div id="tela-funcionarios" class="totem-page">
-                        <div class="totem-nav-top">
-                            <button onclick="mudarTela('tela-home')">← Voltar</button>
-                            <h3>Acesso Restrito</h3>
-                        </div>
-                        <div class="alerta-box">
-                            <p class="titulo-alerta">⚠️ ATENÇÃO!</p>
-                            <p>Esta tela só pode ser acessada por funcionários autorizados.</p>
-                            <p class="instrucao">Aproxime o cartão de verificação para desbloquear.</p>
-                        </div>
-                    </div>
-
+        <!-- Moldura do Monitor/Totem Industrial -->
+        <div class="system-monitor-frame">
+            
+            <!-- Barra de Topo do Sistema -->
+            <div class="system-top-bar">
+                <div class="system-brand">
+                    <span class="jtekt-logo"><span class="letra-branca">JT</span><span class="letra-vermelha">E</span>
+                    <span class="letra-branca">KT</span></span>
+                </div>
+                <div class="system-status">
+                    <span class="status-online">● ONLINE</span>
+                    <span class="status-alerta">⚠️ 1</span>
+                    <span class="system-clock">08:11</span>
                 </div>
             </div>
+
+            <div class="screen-viewport">
+                
+                <!-- TELA 1: MENU PRINCIPAL -->
+                <div id="sys-home" class="system-screen active">
+                    <div class="screen-header-blue">
+                        <small>SISTEMA DE GESTÃO INDUSTRIAL</small>
+                        <h3>Menu Principal</h3>
+                    </div>
+                    <div class="cards-menu-grid">
+                        <div class="card-menu-item" onclick="abrirTelaSystem('sys-mapeamento', document.querySelectorAll('.btn-nav')[1])">
+                            <div class="card-icon">🗺️</div>
+                            <small>MAPA DO GALPÃO</small>
+                            <h4>MAPEAMENTO</h4>
+                            <span class="tag-alerta-red">● 1 Alerta Ativo</span>
+                        </div>
+                        <div class="card-menu-item" onclick="abrirTelaSystem('sys-estoque', document.querySelectorAll('.btn-nav')[2])">
+                            <div class="card-icon">📊</div>
+                            <small>PALETES E SETORES</small>
+                            <h4>CONTROLE DE ESTOQUE</h4>
+                            <span class="tag-alerta-green">● 22 Paletes Ativos</span>
+                        </div>
+                        <div class="card-menu-item" onclick="abrirTelaSystem('sys-funcionarios', document.querySelectorAll('.btn-nav')[3])">
+                            <div class="card-icon">👤</div>
+                            <small>ACESSO E CADASTRO</small>
+                            <h4>CONTROLE DE FUNCIONÁRIOS</h4>
+                            <span class="tag-alerta-green">● 34 Funcionários</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TELA 2: MAPEAMENTO DO GALPÃO -->
+                <div id="sys-mapeamento" class="system-screen">
+                    <div class="mapa-layout-flex">
+                        <div class="mapa-area-principal">
+                            <h4>Planta Baixa — Galpão GAL-01</h4>
+                            <div class="grid-galpao-boxes">
+                                <div class="box-galpao">A1<br><small>24 PALETES</small></div>
+                                <div class="box-galpao alerta-box-red">B1 ⚠️<br><small>32 PALETES</small></div>
+                                <div class="box-galpao">C1<br><small>20 PALETES</small></div>
+                                <div class="box-galpao">A2<br><small>18 PALETES</small></div>
+                                <div class="box-galpao">B2<br><small>15 PALETES</small></div>
+                                <div class="box-galpao">C2<br><small>11 PALETES</small></div>
+                            </div>
+                        </div>
+                        <div class="mapa-painel-lateral">
+                            <small>DETALHES DA ÁREA</small>
+                            <h3>Prateleira B1</h3>
+                            <div class="alerta-box-detalhe">● ALERTA ATIVO</div>
+                            <p>Paletes Armazenados: <strong>32 un.</strong></p>
+                            <p>Capacidade Máxima: <strong>40 un.</strong></p>
+                            <p>Ocupação: <strong>80%</strong></p>
+                            <div class="motivo-alerta">
+                                <strong>MOTIVO DO ALERTA</strong><br>
+                                <small>Capacidade de segurança excedida.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TELA 3: CONTROLE DE ESTOQUE -->
+                <div id="sys-estoque" class="system-screen">
+                    <div class="tabs-estoque-bar">
+                        <span class="tab-item active">B1</span>
+                        <span class="tab-item">B2</span>
+                        <span class="tab-item">B3</span>
+                        <span class="tab-item">B4</span>
+                    </div>
+                    <div class="estoque-flex-content">
+                        <div class="cards-estatisticas">
+                            <div class="card-metric">
+                                <small>PALETES UTILIZADOS</small>
+                                <h2>14 <small>/ 22</small></h2>
+                                <p>Ocupação: 64%</p>
+                            </div>
+                            <div class="card-metric">
+                                <small>PALETES DISPONÍVEIS</small>
+                                <h2>8 <small>/ 22</small></h2>
+                                <p>Disponível: 36%</p>
+                            </div>
+                        </div>
+                        <div class="tabela-itens-container">
+                            <h4>Itens em B1</h4>
+                            <table class="tabela-sistema">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>PRODUTO</th>
+                                        <th>QTD.</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Motor de Direção EPS</td>
+                                        <td>6</td>
+                                        <td><span class="tag-red">● ALERTA</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Bomba Hidráulica H3</td>
+                                        <td>4</td>
+                                        <td><span class="tag-green">● OK</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Rolamento Angular R7</td>
+                                        <td>4</td>
+                                        <td><span class="tag-green">● OK</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TELA 4: CONTROLE DE FUNCIONÁRIOS -->
+                <div id="sys-funcionarios" class="system-screen">
+                    <div class="funcionarios-flex-layout">
+                        <div class="painel-resumo-func">
+                            <div class="box-stat-dark">
+                                <small>TOTAL DE FUNCIONÁRIOS</small>
+                                <h2>34</h2>
+                                <small>cadastrados</small>
+                            </div>
+                            <div class="box-stat-dark">
+                                <small>EM TURNO</small>
+                                <h2 style="color: #28a745;">28</h2>
+                                <small>ativos agora</small>
+                            </div>
+                        </div>
+                        <div class="tabela-func-container">
+                            <h4>Funcionários em Turno</h4>
+                            <table class="tabela-sistema">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>NOME</th>
+                                        <th>FUNÇÃO</th>
+                                        <th>SETOR</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>F001</td>
+                                        <td>Carlos Mendes</td>
+                                        <td>Operador de Empilhadeira</td>
+                                        <td>B1</td>
+                                        <td><span class="tag-green">● ATIVO</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>F002</td>
+                                        <td>Renata Oliveira</td>
+                                        <td>Supervisora de Estoque</td>
+                                        <td>A1</td>
+                                        <td><span class="tag-green">● ATIVO</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>F003</td>
+                                        <td>Diego Santos</td>
+                                        <td>Conferente</td>
+                                        <td>B2</td>
+                                        <td><span class="tag-green">● ATIVO</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+    </div>
+</section>
     </section>
 
     <!-- NOVA SEÇÃO: Representação Física, Maquete e Pitch -->
@@ -142,7 +277,7 @@
                 <div class="card">
                     <h3>Maquete do Armazém</h3>
                     <!-- Substitua o caminho dentro de src="" pelo nome da imagem da sua maquete -->
-                    <img src="https://via.placeholder.com/400x250?text=Foto+da+Maquete" alt="Foto da Maquete do Armazém" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
+                    <img src="/images/foto-maquete.jpeg" alt="Foto da Maquete do Armazém" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
                     <p>Visão geral da maquete física construída para exemplificar a reorganização das posições do armazém.</p>
                 </div>
 
@@ -184,38 +319,39 @@
     </section>
 
     <!-- Equipe -->
-    <section id="equipe" class="section">
-        <div class="container">
-            <h2>Equipe Rocket</h2>
-            <div class="equipe-grid">
-                <div class="membro">
-                    <div class="avatar">M1</div>
-                    <h4>Isabelly</h4>
-                    <p>Líder</p>
-                </div>
-                <div class="membro">
-                    <div class="avatar">M2</div>
-                    <h4>João</h4>
-                    <p>Desenvolvedor</p>
-                </div>
-                <div class="membro">
-                    <div class="avatar">M3</div>
-                    <h4>Arthur</h4>
-                    <p>Desenvolvedor</p>
-                </div>
-                <div class="membro">
-                    <div class="avatar">M4</div>
-                    <h4>Ket</h4>
-                    <p>Designer</p>
-                </div>
-                <div class="membro">
-                    <div class="avatar">M5</div>
-                    <h4>Matheus</h4>
-                    <p>Designer Assistente</p>
-                </div>
+<section id="equipe" class="section">
+    <div class="container">
+        <h2>Equipe Rocket</h2>
+        <div class="equipe-grid">
+            <div class="membro">
+                <!-- Substitua o nome do arquivo pela imagem real (ex: foto-isabelly.jpg ou logo-m1.png) -->
+                <img src="/images/logo-rocket-colorido.jpeg" alt="Isabelly" class="avatar-img">
+                <h4>Isabelly</h4>
+                <p>Líder</p>
+            </div>
+            <div class="membro">
+                <img src="/images/logo-rocket-colorido.jpeg" alt="João" class="avatar-img">
+                <h4>João</h4>
+                <p>Desenvolvedor</p>
+            </div>
+            <div class="membro">
+                <img src="/images/logo-rocket-colorido.jpeg" alt="Arthur" class="avatar-img">
+                <h4>Arthur</h4>
+                <p>Desenvolvedor</p>
+            </div>
+            <div class="membro">
+                <img src="/images/logo-rocket-colorido.jpeg" alt="Ket" class="avatar-img">
+                <h4>Ket</h4>
+                <p>Designer</p>
+            </div>
+            <div class="membro">
+                <img src="/images/logo-rocket-colorido.jpeg" alt="Matheus" class="avatar-img">
+                <h4>Matheus</h4>
+                <p>Designer Assistente</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Rodapé -->
     <footer>
